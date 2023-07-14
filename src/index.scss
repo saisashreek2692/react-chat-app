@@ -1,3 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Ysabeau+Infant:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: inherit;
+}
+
+html,
+body {
+  font-family: "Ysabeau Infant", sans-serif;
+  box-sizing: border-box;
+}
+
 @mixin mobile {
   @media screen and (max-width: 480px) {
     @content;
@@ -227,7 +244,7 @@
         background-color: #ddddf7;
         padding: 10px;
         height: calc(100% - 160px);
-        overflow: scroll;
+        overflow-y: scroll;
 
         .message {
           display: flex;

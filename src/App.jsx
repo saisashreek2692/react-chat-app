@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { Login, Register, Home } from "./Pages/index";
 
 function App() {
   return (
     <>
-      <h1>Hello World</h1>
+      {/* <Login /> */}
+      {/* <Register /> */}
+      <Home />
     </>
   );
 }
