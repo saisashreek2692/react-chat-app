@@ -4,8 +4,8 @@ function App() {
   return (
     <>
       {/* <Login /> */}
-      {/* <Register /> */}
-      <Home />
+      <Register />
+      {/* <Home /> */}
     </>
   );
 }
