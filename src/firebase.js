@@ -5,12 +5,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBkFdoB-GSzsOvfUl8gm6awyEyQaGKUAgs",
-  authDomain: "healthychats-a4842.firebaseapp.com",
-  projectId: "healthychats-a4842",
-  storageBucket: "healthychats-a4842.appspot.com",
-  messagingSenderId: "919798307086",
-  appId: "1:919798307086:web:5bc66035f835e2a78cdf5f",
+  apiKey: "AIzaSyB52QUWQd6JyvlTCSRAfYr-bEDjA8R-L7A",
+  authDomain: "react-burger-builder-22fc9.firebaseapp.com",
+  projectId: "react-burger-builder-22fc9",
+  storageBucket: "react-burger-builder-22fc9.appspot.com",
+  messagingSenderId: "5335710799",
+  appId: "1:5335710799:web:0626e5caf91b675c03fe3a",
 };
 
 // Initialize Firebase

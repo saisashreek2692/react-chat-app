@@ -1,21 +1,33 @@
-import React from "react";
+import React, { useContext, useEffect, useRef } from "react";
+import { AuthContext } from "../Context/AuthContext";
+import { ChatContext } from "../Context/ChatContext";
 
-const Message = () => {
+const Message = ({ message }) => {
+  const { currentUser } = useContext(AuthContext);
+  const { data } = useContext(ChatContext);
+
+  const ref = useRef();
+
+  useEffect(() => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  }, [message]);
+  console.log(message);
   return (
-    <div className="message owner">
+    <div className={`message ${message.senderId === currentUser.uid && owner}`}>
       <div className="messageInfo">
         <img
-          src="https://img.freepik.com/free-photo/portrait-serious-smiling-modern-indian-man-near-office-building_496169-2890.jpg?w=1380&t=st=1689333609~exp=1689334209~hmac=47859bc8ec9d17d595ec39be539d353c33168eab2d62ba24664f7e0d3c7d63ba"
+          src={
+            message.senderId === currentUser.uid
+              ? currentUser.photoURL
+              : data.user.photoURL
+          }
           alt="user picture"
         />
-        <p>Howdy Boys</p>
+        <p>{message.text}</p>
       </div>
       <div className="messageContent">
-        <p>Hello guys</p>
-        <img
-          src="https://img.freepik.com/free-photo/portrait-serious-smiling-modern-indian-man-near-office-building_496169-2890.jpg?w=1380&t=st=1689333609~exp=1689334209~hmac=47859bc8ec9d17d595ec39be539d353c33168eab2d62ba24664f7e0d3c7d63ba"
-          alt="user picture"
-        />
+        <p>{message.text}</p>
+        {message.img && <img src={message.img} alt="user picture" />}
       </div>
     </div>
   );
